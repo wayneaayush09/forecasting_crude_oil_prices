@@ -1,0 +1,15 @@
+# Series ids and release-lag conventions. A value observed on date d is usable at
+# forecast origin t only if availability(d) = d + lag <= t.
+# kind: bdays | days.  Market closes are known at the close of d (lag 0); slower series get explicit lags.
+eia:
+  brent_spot: {key: RBRTE}   # Europe Brent spot FOB, daily, 1987-
+  wti_spot:   {key: RWTC}    # WTI Cushing spot, daily, 1986-
+fred:
+  ovx:        {id: OVXCLS,   lag: {kind: bdays, n: 0}}
+  vix:        {id: VIXCLS,   lag: {kind: bdays, n: 0}}
+  sp500:      {id: SP500,    lag: {kind: bdays, n: 0}}   # FRED keeps ~10y only
+  t10y2y:     {id: T10Y2Y,   lag: {kind: bdays, n: 0}}
+  usd_broad:  {id: DTWEXBGS, lag: {kind: bdays, n: 5}}   # Fed H.10, weekly release
+  cpi:        {id: CPIAUCSL, lag: {kind: days,  n: 45}}  # dated 1st of ref. month, released ~mid next month
+target: brent_spot
+# TODO(Phase 1b): real-time vintages via ALFRED (needs a free FRED API key) for CPI and other revised series.

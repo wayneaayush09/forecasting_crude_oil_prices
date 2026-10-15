@@ -1,0 +1,1 @@
+citation,year,venue,target,frequency,horizons,model_family,transformer,agent_llm,rw_benchmark,futures_benchmark,stat_tests,decomposition,decomposition_causal,scaler_split_leakage_risk,llm_lookahead_control,reported_gain,notes

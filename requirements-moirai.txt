@@ -1,0 +1,5 @@
+# Isolated env for Moirai: uni2ts pins torch<2.5 and scipy<1.12, which conflict with the main stack.
+# Run it as a separate venv that only produces forecast files (parquet) for the shared evaluation code.
+uni2ts==2.0.0
+pandas>=2.2,<3
+pyarrow>=21,<26

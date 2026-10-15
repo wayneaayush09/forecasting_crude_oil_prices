@@ -1,0 +1,14 @@
+# DRAFT: freeze and tag `protocol-frozen` in week 6.
+targets: {primary: brent, robustness: wti}
+daily:   {horizons: [1, 5, 10, 22, 66], unit: trading_days}
+monthly: {horizons: [1, 3, 6, 12, 24], unit: months}
+design:
+  scheme: expanding_window_rolling_origin
+  train_start: 1987-05-20
+  test_start: 2010-01-01
+  text_modes_test_start: 2015-01-01
+  refit: {deep: yearly, statistical: every_origin}
+  seeds: 5
+clean_holdout_start: 2025-07-01
+metrics: [mspe_ratio, mae_ratio, mase, success_ratio, crps, pinball, coverage, winkler]
+tests: [dm_hln, clark_west, giacomini_white, mcs, multi_horizon_spa, giacomini_rossi, pesaran_timmermann]

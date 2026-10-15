@@ -1,0 +1,19 @@
+# data and corpus are rebuilt from scripts, never committed
+data/raw/*
+data/interim/*
+data/processed/*
+corpus/*
+!**/.gitkeep
+# environments / caches
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
+mlruns/
+outputs/
+.env
+# LLM call cache and model weights
+.llm_cache/
+*.safetensors
+*.gguf

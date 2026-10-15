@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Copy-Item \"C:\\\\Users\\\\anand\\\\.claude\\\\plans\\\\i-want-to-build-cuddly-tome.md\" \"C:\\\\Users\\\\anand\\\\Desktop\\\\Forecasting Crude Oil Prices\\\\ROADMAP.md\"; python --version; git --version; \\(Get-Command make -ErrorAction SilentlyContinue\\).Source; py -0 2>$null)",
+      "PowerShell(uv --version; foreach \\($p in 'numpy','pandas','scipy','statsmodels','arch','scikit-learn','lightgbm','torch','neuralforecast','statsforecast','mlforecast','utilsforecast','optuna','hydra-core','mlflow','pytest','pyarrow','requests','matplotlib','vmdpy','EMD-signal','mapie','pydantic','captum','python-dotenv','chronos-forecasting','timesfm','uni2ts','tirex-ts','vllm','langgraph','mcp','lancedb','sentence-transformers','anthropic','PyYAML'\\) { $o = python -m pip index versions $p 2>$null | Select-Object -First 1; \"$p => $o\" })"
+    ]
+  }
+}

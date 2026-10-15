@@ -1,0 +1,8 @@
+-r requirements.txt
+# Deep learning, transformers, foundation models (GPU recommended)
+torch>=2.5
+neuralforecast==3.3.0
+captum==0.9.0
+chronos-forecasting==2.3.2
+timesfm==3.0.2
+tirex-ts==1.4.2
